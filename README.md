@@ -378,52 +378,6 @@ python batch_ocr.py unknown/ -l osd
 }
 ```
 
-## 🚀 Production Deployment
-
-### Docker Deployment
-```dockerfile
-FROM python:3.11-slim
-
-RUN apt-get update && apt-get install -y \
-    tesseract-ocr \
-    tesseract-ocr-eng \
-    libgl1-mesa-glx \
-    libglib2.0-0
-
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-COPY batch_ocr.py .
-ENTRYPOINT ["python", "batch_ocr.py"]
-```
-
-### Kubernetes Scaling
-```yaml
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: ocr-batch-job
-spec:
-  template:
-    spec:
-      containers:
-      - name: ocr-processor
-        image: batch-ocr:latest
-        resources:
-          limits:
-            cpu: "4"
-            memory: "8Gi"
-          requests:
-            cpu: "2"
-            memory: "4Gi"
-```
-
-### Monitoring & Alerting
-- **Processing rate monitoring**: Track documents per hour
-- **Error rate alerts**: Automated failure notifications
-- **Resource utilization**: CPU and memory tracking
-- **Quality metrics**: Confidence score trends
-
 ## 🔧 Troubleshooting
 
 ### Common Issues
