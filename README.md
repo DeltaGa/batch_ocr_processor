@@ -43,30 +43,6 @@ A state-of-the-art, enterprise-grade batch OCR processing system that leverages 
 
 ## 🚀 Quick Start
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-repo/batch-ocr-processor.git
-cd batch-ocr-processor
-
-# Install Tesseract OCR
-# Ubuntu/Debian:
-sudo apt install tesseract-ocr tesseract-ocr-eng
-
-# macOS:
-brew install tesseract
-
-# Windows: Download from https://github.com/UB-Mannheim/tesseract/wiki
-
-# Create virtual environment
-python -m venv ocr_env
-source ocr_env/bin/activate  # Windows: ocr_env\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
 ### Basic Usage
 
 ```bash
@@ -181,17 +157,6 @@ python batch_ocr.py test_batch/ -v
 3. **Horizontal Analysis**: Calculate pixel gaps between adjacent words
 4. **Smart Spacing**: Insert proportional spaces based on actual distances
 5. **Layout Reconstruction**: Rebuild text maintaining original document structure
-
-## 📊 Performance Benchmarks
-
-| Image Type | Size | Processing Time | Throughput |
-|------------|------|----------------|------------|
-| Documents (300 DPI) | 1-2 MB | 1-3 seconds | ~1000 pages/hour |
-| Forms | 0.5-1 MB | 0.5-2 seconds | ~1500 pages/hour |
-| High-res Scans | 5-10 MB | 5-15 seconds | ~300 pages/hour |
-| Mobile Photos | 2-5 MB | 2-8 seconds | ~600 pages/hour |
-
-*Benchmarks on 8-core CPU with multiprocessing mode*
 
 ## 📁 Output Structure
 
@@ -434,60 +399,12 @@ python batch_ocr.py docs/ --individual --combined --clean-text
 4. **Worker Count**: Optimal workers = CPU cores + 4 for I/O bound tasks
 5. **Batch Size**: Process 100-1000 images per batch for optimal performance
 
-## 📋 System Requirements
-
-### Minimum Requirements
-- **Python**: 3.8+
-- **RAM**: 4GB
-- **CPU**: 2 cores
-- **Storage**: 1GB free space
-- **Tesseract**: 4.0+
-
-### Recommended Requirements
-- **Python**: 3.10+
-- **RAM**: 8GB+
-- **CPU**: 4+ cores
-- **Storage**: SSD with 5GB+ free space
-- **Tesseract**: 5.0+
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-```bash
-git clone https://github.com/your-repo/batch-ocr-processor.git
-cd batch-ocr-processor
-python -m venv dev_env
-source dev_env/bin/activate
-pip install -r requirements-dev.txt
-pre-commit install
-```
-
-### Running Tests
-```bash
-pytest tests/ -v
-python -m pytest --cov=batch_ocr tests/
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) for the powerful OCR engine
 - [OpenCV](https://opencv.org/) for advanced image processing capabilities
 - [Pillow](https://python-pillow.org/) for image manipulation
 - [PyTesseract](https://github.com/madmaze/pytesseract) for Python integration
-
-## 📞 Support
-
-- **Documentation**: [Full documentation](https://your-docs-site.com)
-- **Issues**: [GitHub Issues](https://github.com/your-repo/batch-ocr-processor/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/batch-ocr-processor/discussions)
-- **Email**: support@your-domain.com
-
 ---
 
 **Built with ❤️ for the OCR community**
