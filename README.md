@@ -275,6 +275,7 @@ Total: $45.67
 ## 🔧 Configuration Options
 
 ### Command Line Arguments
+| Argument | Description | Default | Example |
 |----------|-------------|---------|---------|
 | `input_paths` | Files/directories to process | Required | `documents/` |
 | `-r, --recursive` | Process directories recursively | False | `-r` |
