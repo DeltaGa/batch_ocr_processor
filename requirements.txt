@@ -1,0 +1,23 @@
+# Core OCR and Image Processing
+pytesseract>=0.3.10
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Data Processing and Export
+pandas>=2.0.0
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# Progress and Logging
+tqdm>=4.65.0
+
+# System and Utilities
+psutil>=5.9.0
+
+# Optional: Advanced Image Processing
+scikit-image>=0.21.0
+imageio>=2.31.0
+
+# Optional: Performance Optimization
+numba>=0.57.0
